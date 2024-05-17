@@ -1,14 +1,13 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector("#add-employees-btn");
 let addNew = true;
-let firstName = "";
-let lastName = "";
-let salary = "";
-const firstNames = [""];
-const lastNames = [""];
-const salaries = [""];
+let employee = {
+  firstName: ,
+  lastName: ,
+  salary: 
+}
+const employees = [];
 let sum = 0;
-let a = 0;
 
 // Collect employee data
 const collectEmployees = function () {
@@ -16,13 +15,12 @@ const collectEmployees = function () {
   while (addNew) {
     //do function
     firstName = window.prompt("What is the employee's FIRST Name?");
-    firstNames[a] = firstName;
     lastName = window.prompt("What is the LAST Name of the employee?");
-    lastNames[a] = lastName;
-    salary = window.prompt("What is the employee's SALARY?");
-    salaries[a] = salary;
+    sal = window.prompt("What is the employee's SALARY?");
+    //convert  from prompt string to number
+    salary = sal.setAttribute(number)
+    employees.push(employee)
     addNew = confirm("Would you like to ADD another employee?");
-    a + 1;
     if (!addNew) {
       break;
     }
