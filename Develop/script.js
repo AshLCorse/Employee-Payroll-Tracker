@@ -2,10 +2,10 @@
 const addEmployeesBtn = document.querySelector("#add-employees-btn");
 let addNew = true;
 let employee = {
-  firstName: ,
-  lastName: ,
-  salary: 
-}
+  firstName: "",
+  lastName: "",
+  salaries: "",
+};
 const employees = [];
 let sum = 0;
 
@@ -16,10 +16,10 @@ const collectEmployees = function () {
     //do function
     firstName = window.prompt("What is the employee's FIRST Name?");
     lastName = window.prompt("What is the LAST Name of the employee?");
-    sal = window.prompt("What is the employee's SALARY?");
+    salaries = window.prompt("What is the employee's SALARY?");
     //convert  from prompt string to number
-    salary = sal.setAttribute(number)
-    employees.push(employee)
+    Number(salaries);
+    employees.push(employee);
     addNew = confirm("Would you like to ADD another employee?");
     if (!addNew) {
       break;
