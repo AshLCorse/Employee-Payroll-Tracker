@@ -11,9 +11,24 @@ const collectEmployees = function () {
   // TODO: Get user input to create and return an array of employee objects
   while (addNew) {
     //do function
-    const firstName = window.prompt("What is the employee's FIRST Name?");
-    const lastName = window.prompt("What is the LAST Name of the employee?");
-    const salaries = window.prompt("What is the employee's SALARY?");
+    let firstName = window.prompt("What is the employee's FIRST Name?");
+    while (firstName === "") {
+      if (firstName === "") {
+        firstName = window.prompt("Please do not leave the first name blank.");
+      }
+    }
+    let lastName = window.prompt("What is the LAST Name of the employee?");
+    while (lastName === "") {
+      if (lastName === "") {
+        lastName = window.prompt("Please do not leave the last name blank.");
+      }
+    }
+    let salaries = window.prompt("What is the employee's SALARY?");
+    while (salaries === NaN) {
+      if (salaries === NaN) {
+        salaries = window.prompt("Please enter a valid number for salary.");
+      }
+    }
     //convert  from prompt string to number
     let employees = {
       firstName: firstName,
@@ -25,6 +40,11 @@ const collectEmployees = function () {
     if (!addNew) {
       break;
     }
+    employees = {
+      firstName: "",
+      lastName: "",
+      salaries: "",
+    };
   } //lets user input new employee until cancel button is pressed
   return employeesArray;
 };
